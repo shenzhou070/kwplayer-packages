@@ -90,3 +90,4 @@ Gentoo的用户, 可下载build_gentoo下的ebuild, 放入本地的overlay, 执�
 全局快捷键
 * leveldb - 强大的NoSQL数据库(用于缓存数据), kwplayer用它来缓存列表
 * python3-leveldb  -  leveldb的python3绑定
+* gstreamer1.0-alsa - 如果你的系统里的声音系统是ALSA, 需要安装这个包. 参考[#issue63](https://github.com/LiuLang/kwplayer-packages/issues/63)

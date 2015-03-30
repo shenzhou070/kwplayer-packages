@@ -51,6 +51,15 @@ Arch Linux用户, 可以直接使用build_arch/PKGBUILD脚本来安装kwplayer, 
 MJsaka <qiuxuenan@gmail.com> 维护的. 使用时有什么问题, 可以直接联系他.
 非常感谢他做的工作.
 
+*关于桌面歌词无法固定的解决方法(#66)*
+
+因为Extra源中python-cairo的代码来自于[cairo官方](http://www.cairographics.org/pycairo)，不知是太新了还是怎么的，无法和python-gobject的Region补丁兼容。在AUR中有个python-cairo-git，这个包源码来自于[freedesktop](http://cgit.freedesktop.org/pycairo/)，没有问题。先安装python-cairo-git，因为python-gobject依赖python-cairo-git:
+
+	1. 首先安装AUR中的python-cairo-git
+		$ yaourt python-cairo-git	   
+	2. 然后安装build_arch中打好补丁的pygobject-3.14.0-1.src.tar.gz(因为上面的原因，所以官方Extra源中的python-gobject包应该不会包含这个补丁，可以根据自己的需要安装)，首先解压然后在目录中执行：
+		$ makepkg -s PKGBUILD
+		# pacman -U *.pkg.tar.xz
 
 Gentoo
 ======

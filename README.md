@@ -63,10 +63,11 @@ MJsaka <qiuxuenan@gmail.com> 维护的. 使用时有什么问题, 可以直接�
 
 Gentoo
 ======
-Gentoo的用户, 可下载build_gentoo下的ebuild, 放入本地的overlay, 执行
-`ebuild kwplayer-*.ebuild manifest`, 然后`emerge kwplayer`安装. 
-也可以直接下载tbz2包放入${PKGDIR}里, 然后`emerge -k kwplayer`安装.
-使用时有什么问题, 请联系 MJsaka <qiuxuenan@gmail.com> .
+添加gentoo-zh的overlay，直接安装即可：
+
+layman -a gentoo-zh;emerge kwplayer
+
+ebuild有问题，反馈至：http://github.com/microcai/gentoo-zh
 
 
 打包时要包含的依赖包

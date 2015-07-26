@@ -19,17 +19,12 @@ Debian系
 
 Fedora系
 =======
-Fedora 的打包工作是由 mosquito (@1dot75cm) 负责. 目前支持 fc19, fc20, fc21, fc22.
-更多其他开源软件欢迎访问 [myrepo](https://copr.fedoraproject.org/coprs/mosquito/myrepo/) 主页进行查询.
+Fedora 的打包工作是由 FZUG 负责. 目前支持 fc21, fc22. 添加 [FZUG源](https://github.com/FZUG/repo/wiki/FZUG) 后，使用以下命令安装。
 
-*安装步骤:*
-
-	# yum install dnf-plugins-core
-	# dnf copr enable mosquito/myrepo    # 或直接到 myrepo 源主页, 下载对应 repo 文件到 /etc/yum.repos.d/ 中
-	# dnf localinstall http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-	# dnf install kwplayer
-
-**注: 因为有几个依赖包不在官方源内, 请添加 rpmfusion 源和 myrepo 源, 否则直接安装 rpm 包会出错**
+```bash
+dnf install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf install kwplayer
+```
 
 
 RHEL系
